@@ -3,7 +3,7 @@ package tests;
 import org.testng.annotations.Test;
 import pages.HomePageBMI;
 
-public class BMITest extends BaseTest {
+public class BMICategoryTests extends BaseTest {
 
     @Test(priority = 0)
     public void starvationCategoryTest() {

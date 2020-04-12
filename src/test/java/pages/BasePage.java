@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,6 +13,7 @@ public class BasePage {
     WebDriver driver;
     WebDriverWait wait;
     Select select;
+    Alert alert;
 
     BasePage(WebDriver driver) {
         this.driver = driver;
@@ -44,7 +46,7 @@ public class BasePage {
     }
 
     public void selectFromDropDown(By elementBy, String textToSelect) {
-        select = new Select(driver.findElement(By.name("elementBy")));
+        select = new Select(driver.findElement(elementBy));
         select.selectByVisibleText(textToSelect);
     }
 
@@ -52,4 +54,9 @@ public class BasePage {
         driver.findElement(elementBy).clear();
     }
 
+    public void verifyAlertText(String expectedAlertText){
+        alert = driver.switchTo().alert();
+        Assert.assertEquals(alert.getText(), expectedAlertText);
+        alert.accept();
+    }
 }

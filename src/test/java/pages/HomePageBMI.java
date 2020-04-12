@@ -65,7 +65,7 @@ public class HomePageBMI extends BasePage {
 
     public HomePageBMI verifyCategoryRangePounds() {
 
-return this;
+        return this;
     }
 
 }

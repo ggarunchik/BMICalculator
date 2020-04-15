@@ -15,13 +15,13 @@ public class HomePageBMI extends BasePage {
     private By calculateBtn = By.name("cc");
     private By categoryResult = By.name("desc");
 
+    public HomePageBMI(WebDriver driver) {
+        super(driver);
+    }
+
     public HomePageBMI openHomePage() {
         driver.get(baseURL);
         return this;
-    }
-
-    public HomePageBMI(WebDriver driver) {
-        super(driver);
     }
 
     public HomePageBMI setUserWeight(String userWeight) {

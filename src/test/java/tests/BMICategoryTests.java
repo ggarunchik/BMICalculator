@@ -5,7 +5,7 @@ import pages.HomePageBMI;
 
 public class BMICategoryTests extends BaseTest {
 
-    @Test(priority = 0)
+    @Test
     public void starvationCategoryTest() {
         HomePageBMI homePageBMI = new HomePageBMI(driver);
         homePageBMI
@@ -14,7 +14,7 @@ public class BMICategoryTests extends BaseTest {
                 .verifyCategoryRangeKilos("48.6", "180", "Your category is Starvation");
     }
 
-    @Test(priority = 1)
+    @Test
     public void underweightCategoryTest() {
         HomePageBMI homePageBMI = new HomePageBMI(driver);
         homePageBMI
@@ -25,7 +25,7 @@ public class BMICategoryTests extends BaseTest {
                 .verifyCategoryRangeKilos("50.36", "165", "Your category is Underweight");
     }
 
-    @Test(priority = 2)
+    @Test
     public void normalCategoryTest() {
         HomePageBMI homePageBMI = new HomePageBMI(driver);
         homePageBMI
@@ -34,7 +34,7 @@ public class BMICategoryTests extends BaseTest {
                 .verifyCategoryRangeKilos("72.24", "170", "Your category is Normal");
     }
 
-    @Test(priority = 3)
+    @Test
     public void overweightCategoryTest() {
         HomePageBMI homePageBMI = new HomePageBMI(driver);
         homePageBMI
@@ -43,7 +43,7 @@ public class BMICategoryTests extends BaseTest {
                 .verifyCategoryRangeKilos("52.27", "132", "Your category is Overweight");
     }
 
-    @Test(priority = 4)
+    @Test
     public void obeseCategoryTest() {
         HomePageBMI homePageBMI = new HomePageBMI(driver);
         homePageBMI

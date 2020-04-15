@@ -5,23 +5,23 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePageBMI extends BasePage {
 
-    public HomePageBMI(WebDriver driver) {
-        super(driver);
-    }
+    private static final String baseURL = "https://healthunify.com/bmicalculator/";
 
-    String baseURL = "https://healthunify.com/bmicalculator/";
-
-    By weightField = By.name("wg");
-    By heightField = By.name("ht");
-    By weightDropDown = By.name("opt1");
-    By heightDropDownFirstValue = By.name("opt2");
-    By heightDropDownSecondValue = By.name("opt3");
-    By calculateBtn = By.name("cc");
-    By categoryResult = By.name("desc");
+    private By weightField = By.name("wg");
+    private By heightField = By.name("ht");
+    private By weightDropDown = By.name("opt1");
+    private By heightDropDownFirstValue = By.name("opt2");
+    private By heightDropDownSecondValue = By.name("opt3");
+    private By calculateBtn = By.name("cc");
+    private By categoryResult = By.name("desc");
 
     public HomePageBMI openHomePage() {
         driver.get(baseURL);
         return this;
+    }
+
+    public HomePageBMI(WebDriver driver) {
+        super(driver);
     }
 
     public HomePageBMI setUserWeight(String userWeight) {
@@ -64,7 +64,6 @@ public class HomePageBMI extends BasePage {
     }
 
     public HomePageBMI verifyCategoryRangePounds() {
-
         return this;
     }
 
